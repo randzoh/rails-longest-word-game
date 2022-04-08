@@ -1,0 +1,13 @@
+<h1>Score</h1>
+
+<% if @included %>
+  <% if @english_word %>
+    <p><strong>Congrat!</strong> <%= @word %> is a valid!</p>
+  <% else %>
+    <p>Sorry but <%= @word %> does not seem to be invalid :( </p>
+  <% end %>
+<% else %>
+  <p>Sorry but <%= @word %> can't be built out of <%= @letters %></p>
+<% end %>
+
+<%= link_to "Play again", '/new' %>
